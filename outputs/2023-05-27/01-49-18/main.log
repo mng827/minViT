@@ -1,0 +1,207 @@
+[2023-05-27 01:49:20,235][__main__][INFO] - ViT(
+  (patch_embed): PatchEmbed(
+    (proj): Conv2d(3, 96, kernel_size=(2, 2), stride=(2, 2))
+  )
+  (embed_dropout): Dropout(p=0.2, inplace=False)
+  (transformer_blocks): ModuleList(
+    (0): Block(
+      (ln_1): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+      (attn): NewMultiHeadAttention(
+        (qkv): Linear(in_features=96, out_features=288, bias=True)
+        (projection): Linear(in_features=96, out_features=96, bias=True)
+        (attention_dropout): Dropout(p=0.2, inplace=False)
+        (projection_dropout): Dropout(p=0.2, inplace=False)
+      )
+      (ln_2): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+      (mlp): Sequential(
+        (0): Linear(in_features=96, out_features=384, bias=True)
+        (1): GELU()
+        (2): Linear(in_features=384, out_features=96, bias=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (1): Block(
+      (ln_1): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+      (attn): NewMultiHeadAttention(
+        (qkv): Linear(in_features=96, out_features=288, bias=True)
+        (projection): Linear(in_features=96, out_features=96, bias=True)
+        (attention_dropout): Dropout(p=0.2, inplace=False)
+        (projection_dropout): Dropout(p=0.2, inplace=False)
+      )
+      (ln_2): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+      (mlp): Sequential(
+        (0): Linear(in_features=96, out_features=384, bias=True)
+        (1): GELU()
+        (2): Linear(in_features=384, out_features=96, bias=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (2): Block(
+      (ln_1): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+      (attn): NewMultiHeadAttention(
+        (qkv): Linear(in_features=96, out_features=288, bias=True)
+        (projection): Linear(in_features=96, out_features=96, bias=True)
+        (attention_dropout): Dropout(p=0.2, inplace=False)
+        (projection_dropout): Dropout(p=0.2, inplace=False)
+      )
+      (ln_2): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+      (mlp): Sequential(
+        (0): Linear(in_features=96, out_features=384, bias=True)
+        (1): GELU()
+        (2): Linear(in_features=384, out_features=96, bias=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (3): Block(
+      (ln_1): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+      (attn): NewMultiHeadAttention(
+        (qkv): Linear(in_features=96, out_features=288, bias=True)
+        (projection): Linear(in_features=96, out_features=96, bias=True)
+        (attention_dropout): Dropout(p=0.2, inplace=False)
+        (projection_dropout): Dropout(p=0.2, inplace=False)
+      )
+      (ln_2): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+      (mlp): Sequential(
+        (0): Linear(in_features=96, out_features=384, bias=True)
+        (1): GELU()
+        (2): Linear(in_features=384, out_features=96, bias=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (4): Block(
+      (ln_1): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+      (attn): NewMultiHeadAttention(
+        (qkv): Linear(in_features=96, out_features=288, bias=True)
+        (projection): Linear(in_features=96, out_features=96, bias=True)
+        (attention_dropout): Dropout(p=0.2, inplace=False)
+        (projection_dropout): Dropout(p=0.2, inplace=False)
+      )
+      (ln_2): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+      (mlp): Sequential(
+        (0): Linear(in_features=96, out_features=384, bias=True)
+        (1): GELU()
+        (2): Linear(in_features=384, out_features=96, bias=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (5): Block(
+      (ln_1): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+      (attn): NewMultiHeadAttention(
+        (qkv): Linear(in_features=96, out_features=288, bias=True)
+        (projection): Linear(in_features=96, out_features=96, bias=True)
+        (attention_dropout): Dropout(p=0.2, inplace=False)
+        (projection_dropout): Dropout(p=0.2, inplace=False)
+      )
+      (ln_2): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+      (mlp): Sequential(
+        (0): Linear(in_features=96, out_features=384, bias=True)
+        (1): GELU()
+        (2): Linear(in_features=384, out_features=96, bias=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+  )
+  (ln): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+  (head): Linear(in_features=96, out_features=10, bias=True)
+)
+[2023-05-27 01:52:02,081][__main__][INFO] - Epoch 1: Loss: 1.854 Train Accuracy: 0.302 Test Accuracy: 0.384
+[2023-05-27 01:54:35,283][__main__][INFO] - Epoch 2: Loss: 1.650 Train Accuracy: 0.388 Test Accuracy: 0.432
+[2023-05-27 01:57:09,995][__main__][INFO] - Epoch 3: Loss: 1.529 Train Accuracy: 0.438 Test Accuracy: 0.461
+[2023-05-27 01:59:45,559][__main__][INFO] - Epoch 4: Loss: 1.444 Train Accuracy: 0.472 Test Accuracy: 0.493
+[2023-05-27 02:02:21,414][__main__][INFO] - Epoch 5: Loss: 1.375 Train Accuracy: 0.497 Test Accuracy: 0.490
+[2023-05-27 02:04:57,801][__main__][INFO] - Epoch 6: Loss: 1.324 Train Accuracy: 0.520 Test Accuracy: 0.505
+[2023-05-27 02:07:34,164][__main__][INFO] - Epoch 7: Loss: 1.271 Train Accuracy: 0.540 Test Accuracy: 0.539
+[2023-05-27 02:10:10,562][__main__][INFO] - Epoch 8: Loss: 1.228 Train Accuracy: 0.552 Test Accuracy: 0.557
+[2023-05-27 02:12:47,707][__main__][INFO] - Epoch 9: Loss: 1.189 Train Accuracy: 0.572 Test Accuracy: 0.576
+[2023-05-27 02:15:24,562][__main__][INFO] - Epoch 10: Loss: 1.157 Train Accuracy: 0.582 Test Accuracy: 0.590
+[2023-05-27 02:18:01,415][__main__][INFO] - Epoch 11: Loss: 1.126 Train Accuracy: 0.593 Test Accuracy: 0.619
+[2023-05-27 02:20:38,375][__main__][INFO] - Epoch 12: Loss: 1.097 Train Accuracy: 0.603 Test Accuracy: 0.619
+[2023-05-27 02:23:15,430][__main__][INFO] - Epoch 13: Loss: 1.071 Train Accuracy: 0.615 Test Accuracy: 0.626
+[2023-05-27 02:25:52,252][__main__][INFO] - Epoch 14: Loss: 1.047 Train Accuracy: 0.622 Test Accuracy: 0.635
+[2023-05-27 02:28:29,200][__main__][INFO] - Epoch 15: Loss: 1.029 Train Accuracy: 0.629 Test Accuracy: 0.642
+[2023-05-27 02:31:06,267][__main__][INFO] - Epoch 16: Loss: 1.001 Train Accuracy: 0.639 Test Accuracy: 0.648
+[2023-05-27 02:33:43,369][__main__][INFO] - Epoch 17: Loss: 0.982 Train Accuracy: 0.646 Test Accuracy: 0.654
+[2023-05-27 02:36:20,434][__main__][INFO] - Epoch 18: Loss: 0.967 Train Accuracy: 0.653 Test Accuracy: 0.670
+[2023-05-27 02:38:57,673][__main__][INFO] - Epoch 19: Loss: 0.947 Train Accuracy: 0.661 Test Accuracy: 0.665
+[2023-05-27 02:41:35,397][__main__][INFO] - Epoch 20: Loss: 0.927 Train Accuracy: 0.668 Test Accuracy: 0.679
+[2023-05-27 02:44:12,613][__main__][INFO] - Epoch 21: Loss: 0.920 Train Accuracy: 0.671 Test Accuracy: 0.677
+[2023-05-27 02:46:49,811][__main__][INFO] - Epoch 22: Loss: 0.899 Train Accuracy: 0.677 Test Accuracy: 0.693
+[2023-05-27 02:49:26,802][__main__][INFO] - Epoch 23: Loss: 0.887 Train Accuracy: 0.682 Test Accuracy: 0.686
+[2023-05-27 02:52:04,156][__main__][INFO] - Epoch 24: Loss: 0.871 Train Accuracy: 0.689 Test Accuracy: 0.708
+[2023-05-27 02:54:41,169][__main__][INFO] - Epoch 25: Loss: 0.852 Train Accuracy: 0.696 Test Accuracy: 0.693
+[2023-05-27 02:57:18,572][__main__][INFO] - Epoch 26: Loss: 0.841 Train Accuracy: 0.698 Test Accuracy: 0.707
+[2023-05-27 02:59:56,163][__main__][INFO] - Epoch 27: Loss: 0.831 Train Accuracy: 0.703 Test Accuracy: 0.712
+[2023-05-27 03:02:33,408][__main__][INFO] - Epoch 28: Loss: 0.815 Train Accuracy: 0.712 Test Accuracy: 0.722
+[2023-05-27 03:05:10,763][__main__][INFO] - Epoch 29: Loss: 0.806 Train Accuracy: 0.713 Test Accuracy: 0.718
+[2023-05-27 03:07:48,288][__main__][INFO] - Epoch 30: Loss: 0.795 Train Accuracy: 0.716 Test Accuracy: 0.713
+[2023-05-27 03:10:25,555][__main__][INFO] - Epoch 31: Loss: 0.782 Train Accuracy: 0.723 Test Accuracy: 0.723
+[2023-05-27 03:13:02,959][__main__][INFO] - Epoch 32: Loss: 0.770 Train Accuracy: 0.726 Test Accuracy: 0.727
+[2023-05-27 03:15:40,482][__main__][INFO] - Epoch 33: Loss: 0.761 Train Accuracy: 0.731 Test Accuracy: 0.723
+[2023-05-27 03:18:17,903][__main__][INFO] - Epoch 34: Loss: 0.750 Train Accuracy: 0.733 Test Accuracy: 0.728
+[2023-05-27 03:20:55,131][__main__][INFO] - Epoch 35: Loss: 0.736 Train Accuracy: 0.738 Test Accuracy: 0.727
+[2023-05-27 03:23:32,440][__main__][INFO] - Epoch 36: Loss: 0.725 Train Accuracy: 0.743 Test Accuracy: 0.733
+[2023-05-27 03:26:10,007][__main__][INFO] - Epoch 37: Loss: 0.715 Train Accuracy: 0.747 Test Accuracy: 0.728
+[2023-05-27 03:28:47,353][__main__][INFO] - Epoch 38: Loss: 0.708 Train Accuracy: 0.746 Test Accuracy: 0.747
+[2023-05-27 03:31:24,820][__main__][INFO] - Epoch 39: Loss: 0.695 Train Accuracy: 0.753 Test Accuracy: 0.753
+[2023-05-27 03:34:02,010][__main__][INFO] - Epoch 40: Loss: 0.688 Train Accuracy: 0.753 Test Accuracy: 0.739
+[2023-05-27 03:36:39,196][__main__][INFO] - Epoch 41: Loss: 0.680 Train Accuracy: 0.756 Test Accuracy: 0.744
+[2023-05-27 03:39:16,818][__main__][INFO] - Epoch 42: Loss: 0.669 Train Accuracy: 0.763 Test Accuracy: 0.758
+[2023-05-27 03:41:54,202][__main__][INFO] - Epoch 43: Loss: 0.662 Train Accuracy: 0.766 Test Accuracy: 0.750
+[2023-05-27 03:44:31,402][__main__][INFO] - Epoch 44: Loss: 0.650 Train Accuracy: 0.769 Test Accuracy: 0.737
+[2023-05-27 03:47:08,887][__main__][INFO] - Epoch 45: Loss: 0.639 Train Accuracy: 0.774 Test Accuracy: 0.761
+[2023-05-27 03:49:45,977][__main__][INFO] - Epoch 46: Loss: 0.639 Train Accuracy: 0.773 Test Accuracy: 0.762
+[2023-05-27 03:52:23,157][__main__][INFO] - Epoch 47: Loss: 0.626 Train Accuracy: 0.777 Test Accuracy: 0.756
+[2023-05-27 03:55:00,443][__main__][INFO] - Epoch 48: Loss: 0.616 Train Accuracy: 0.783 Test Accuracy: 0.732
+[2023-05-27 03:57:37,771][__main__][INFO] - Epoch 49: Loss: 0.610 Train Accuracy: 0.781 Test Accuracy: 0.749
+[2023-05-27 04:00:15,259][__main__][INFO] - Epoch 50: Loss: 0.601 Train Accuracy: 0.786 Test Accuracy: 0.761
+[2023-05-27 04:02:52,493][__main__][INFO] - Epoch 51: Loss: 0.591 Train Accuracy: 0.791 Test Accuracy: 0.763
+[2023-05-27 04:05:29,652][__main__][INFO] - Epoch 52: Loss: 0.584 Train Accuracy: 0.792 Test Accuracy: 0.752
+[2023-05-27 04:08:06,717][__main__][INFO] - Epoch 53: Loss: 0.579 Train Accuracy: 0.791 Test Accuracy: 0.764
+[2023-05-27 04:10:43,736][__main__][INFO] - Epoch 54: Loss: 0.567 Train Accuracy: 0.798 Test Accuracy: 0.771
+[2023-05-27 04:13:21,107][__main__][INFO] - Epoch 55: Loss: 0.560 Train Accuracy: 0.799 Test Accuracy: 0.762
+[2023-05-27 04:15:58,089][__main__][INFO] - Epoch 56: Loss: 0.554 Train Accuracy: 0.802 Test Accuracy: 0.776
+[2023-05-27 04:18:35,290][__main__][INFO] - Epoch 57: Loss: 0.554 Train Accuracy: 0.800 Test Accuracy: 0.775
+[2023-05-27 04:21:12,732][__main__][INFO] - Epoch 58: Loss: 0.541 Train Accuracy: 0.806 Test Accuracy: 0.771
+[2023-05-27 04:23:49,991][__main__][INFO] - Epoch 59: Loss: 0.529 Train Accuracy: 0.812 Test Accuracy: 0.765
+[2023-05-27 04:26:27,432][__main__][INFO] - Epoch 60: Loss: 0.524 Train Accuracy: 0.811 Test Accuracy: 0.768
+[2023-05-27 04:29:04,456][__main__][INFO] - Epoch 61: Loss: 0.519 Train Accuracy: 0.815 Test Accuracy: 0.769
+[2023-05-27 04:31:41,782][__main__][INFO] - Epoch 62: Loss: 0.511 Train Accuracy: 0.818 Test Accuracy: 0.769
+[2023-05-27 04:34:18,824][__main__][INFO] - Epoch 63: Loss: 0.506 Train Accuracy: 0.820 Test Accuracy: 0.750
+[2023-05-27 04:36:55,996][__main__][INFO] - Epoch 64: Loss: 0.500 Train Accuracy: 0.822 Test Accuracy: 0.774
+[2023-05-27 04:39:33,442][__main__][INFO] - Epoch 65: Loss: 0.491 Train Accuracy: 0.825 Test Accuracy: 0.767
+[2023-05-27 04:42:13,436][__main__][INFO] - Epoch 66: Loss: 0.485 Train Accuracy: 0.827 Test Accuracy: 0.775
+[2023-05-27 04:44:52,364][__main__][INFO] - Epoch 67: Loss: 0.480 Train Accuracy: 0.828 Test Accuracy: 0.781
+[2023-05-27 04:47:29,361][__main__][INFO] - Epoch 68: Loss: 0.474 Train Accuracy: 0.829 Test Accuracy: 0.766
+[2023-05-27 04:50:06,355][__main__][INFO] - Epoch 69: Loss: 0.464 Train Accuracy: 0.834 Test Accuracy: 0.781
+[2023-05-27 04:52:43,694][__main__][INFO] - Epoch 70: Loss: 0.464 Train Accuracy: 0.835 Test Accuracy: 0.776
+[2023-05-27 04:55:20,637][__main__][INFO] - Epoch 71: Loss: 0.449 Train Accuracy: 0.839 Test Accuracy: 0.773
+[2023-05-27 04:57:57,898][__main__][INFO] - Epoch 72: Loss: 0.446 Train Accuracy: 0.840 Test Accuracy: 0.785
+[2023-05-27 05:00:34,848][__main__][INFO] - Epoch 73: Loss: 0.439 Train Accuracy: 0.843 Test Accuracy: 0.772
+[2023-05-27 05:03:11,936][__main__][INFO] - Epoch 74: Loss: 0.428 Train Accuracy: 0.847 Test Accuracy: 0.768
+[2023-05-27 05:05:48,941][__main__][INFO] - Epoch 75: Loss: 0.433 Train Accuracy: 0.846 Test Accuracy: 0.770
+[2023-05-27 05:08:25,738][__main__][INFO] - Epoch 76: Loss: 0.422 Train Accuracy: 0.851 Test Accuracy: 0.772
+[2023-05-27 05:11:02,748][__main__][INFO] - Epoch 77: Loss: 0.415 Train Accuracy: 0.851 Test Accuracy: 0.783
+[2023-05-27 05:13:39,872][__main__][INFO] - Epoch 78: Loss: 0.411 Train Accuracy: 0.852 Test Accuracy: 0.784
+[2023-05-27 05:16:16,722][__main__][INFO] - Epoch 79: Loss: 0.407 Train Accuracy: 0.854 Test Accuracy: 0.774
+[2023-05-27 05:18:53,856][__main__][INFO] - Epoch 80: Loss: 0.394 Train Accuracy: 0.860 Test Accuracy: 0.772
+[2023-05-27 05:21:31,032][__main__][INFO] - Epoch 81: Loss: 0.395 Train Accuracy: 0.856 Test Accuracy: 0.775
+[2023-05-27 05:24:07,957][__main__][INFO] - Epoch 82: Loss: 0.387 Train Accuracy: 0.860 Test Accuracy: 0.777
+[2023-05-27 05:26:44,862][__main__][INFO] - Epoch 83: Loss: 0.383 Train Accuracy: 0.862 Test Accuracy: 0.775
+[2023-05-27 05:29:21,802][__main__][INFO] - Epoch 84: Loss: 0.378 Train Accuracy: 0.864 Test Accuracy: 0.783
+[2023-05-27 05:31:58,813][__main__][INFO] - Epoch 85: Loss: 0.374 Train Accuracy: 0.866 Test Accuracy: 0.767
+[2023-05-27 05:34:35,622][__main__][INFO] - Epoch 86: Loss: 0.362 Train Accuracy: 0.868 Test Accuracy: 0.779
+[2023-05-27 05:37:12,632][__main__][INFO] - Epoch 87: Loss: 0.366 Train Accuracy: 0.868 Test Accuracy: 0.774
+[2023-05-27 05:39:49,984][__main__][INFO] - Epoch 88: Loss: 0.362 Train Accuracy: 0.868 Test Accuracy: 0.765
+[2023-05-27 05:42:26,859][__main__][INFO] - Epoch 89: Loss: 0.353 Train Accuracy: 0.872 Test Accuracy: 0.781
+[2023-05-27 05:45:04,032][__main__][INFO] - Epoch 90: Loss: 0.341 Train Accuracy: 0.876 Test Accuracy: 0.775
+[2023-05-27 05:47:40,793][__main__][INFO] - Epoch 91: Loss: 0.343 Train Accuracy: 0.877 Test Accuracy: 0.789
+[2023-05-27 05:50:17,453][__main__][INFO] - Epoch 92: Loss: 0.336 Train Accuracy: 0.880 Test Accuracy: 0.776
+[2023-05-27 05:52:54,309][__main__][INFO] - Epoch 93: Loss: 0.332 Train Accuracy: 0.881 Test Accuracy: 0.767
+[2023-05-27 05:55:31,023][__main__][INFO] - Epoch 94: Loss: 0.328 Train Accuracy: 0.882 Test Accuracy: 0.776
+[2023-05-27 05:58:07,619][__main__][INFO] - Epoch 95: Loss: 0.324 Train Accuracy: 0.883 Test Accuracy: 0.767
+[2023-05-27 06:00:44,798][__main__][INFO] - Epoch 96: Loss: 0.317 Train Accuracy: 0.885 Test Accuracy: 0.777
+[2023-05-27 06:03:21,594][__main__][INFO] - Epoch 97: Loss: 0.317 Train Accuracy: 0.886 Test Accuracy: 0.755
+[2023-05-27 06:05:58,440][__main__][INFO] - Epoch 98: Loss: 0.312 Train Accuracy: 0.887 Test Accuracy: 0.772
+[2023-05-27 06:08:35,253][__main__][INFO] - Epoch 99: Loss: 0.307 Train Accuracy: 0.888 Test Accuracy: 0.771
+[2023-05-27 06:11:12,389][__main__][INFO] - Epoch 100: Loss: 0.304 Train Accuracy: 0.890 Test Accuracy: 0.768
+[2023-05-27 06:11:13,147][__main__][INFO] - Finished Training
